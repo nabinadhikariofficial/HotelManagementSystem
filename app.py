@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.secret_key = 'key'
 
 host_add = '0.0.0.0'
-port_add = 80
+port_add = 800
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -18,31 +18,41 @@ def Login():
     return render_template('login.html')
 
 
-@app.route("/index.html")
+@app.route("/index")
 def Index():
     if 'loggedin' in session:
         return render_template('index.html')
     return redirect(url_for('Login'))
 
 
-@app.route("/reception.html")
+@app.route("/reception")
 def Reception():
     if 'loggedin' in session:
         return render_template('reception.html')
     return redirect(url_for('Login'))
 
 
-@app.route("/stock.html")
-def stock():
+@app.route("/stock")
+def Stock():
     if 'loggedin' in session:
+        username = request.args.get('username')
+        print(username)
         return render_template('stock.html')
     return redirect(url_for('Login'))
 
 
-@app.route("/profile.html")
-def profile():
+@app.route("/profile")
+def Profile():
     if 'loggedin' in session:
         return render_template('profile.html')
+    return redirect(url_for('Login'))
+
+
+@app.route("/registration")
+def Registration():
+    if 'loggedin' in session:
+        status = request.args.get('status')
+        return render_template('registration.html', status=status)
     return redirect(url_for('Login'))
 
 

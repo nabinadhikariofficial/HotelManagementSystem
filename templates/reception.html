@@ -13,14 +13,15 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('Index')}}"><i
                                 class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="reception.html"><i
+                    <li class="nav-item"><a class="nav-link active" href="{{url_for('Reception')}}"><i
                                 class="fas fa-hotel"></i><span>Reception</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="stock.html"><i
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('Stock')}}"><i
                                 class="fas fa-table"></i><span>Stock</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html"><i
-                                class="fas fa-user"></i><span>Profile</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('Profile')}}"><i
+                                class="fas fa-user"></i><span>Profile</span></a>
+                    </li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0"
                         id="sidebarToggle" type="button"></button></div>
@@ -178,11 +179,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=101_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=101_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=101_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -197,11 +198,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=201_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=201_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=201_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -216,11 +217,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=301_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=301_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=301_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -235,11 +236,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=401_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=401_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=401_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -254,11 +255,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=501_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=501_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=501_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -275,11 +276,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=102_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=102_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=102_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -294,11 +295,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=202_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=202_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=202_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -313,11 +314,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=302_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=302_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=302_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -332,11 +333,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=402_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=402_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=402_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -351,11 +352,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=502_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=502_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=502_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -372,11 +373,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=103_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=103_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=103_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -391,11 +392,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=203_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=203_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=203_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -408,14 +409,13 @@
                                 <div class="dropdown no-arrow mt-2 border-0"><button
                                         class="btn btn-primary dropdown-toggle border-0" aria-expanded="false"
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
-                                            class="rounded img-fluid" src="static/img/bed.png"
-                                            style="background: var(--bs-success);" /></button>
+                                            class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=303_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=303_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=303_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>
@@ -430,11 +430,11 @@
                                         data-bs-toggle="dropdown" type="button" style="background: white;"><img
                                             class="rounded img-fluid" src="static/img/bed.png" /></button>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="#"><i
+                                            class="dropdown-item" href="registration?status=403_checkin"><i
                                                 class="far fa-check-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            In</a><a class="dropdown-item" href="#"><i
+                                            In</a><a class="dropdown-item" href="registration?status=403_checkout"><i
                                                 class="far fa-times-circle fa-sm fa-fw me-2 text-gray-400"></i> Check
-                                            Out</a><a class="dropdown-item" href="#"><i
+                                            Out</a><a class="dropdown-item" href="registration?status=403_info"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Info</a>
                                     </div>
                                 </div>

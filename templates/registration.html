@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}Reception - Hotel Management System{% endblock %}
+{% block content %}
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a
+                    class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="material-icons"
+                            style="font-size: 48px;transform: rotate(14deg);">hotel</i></div>
+                    <div class="sidebar-brand-text mx-3"><span>HMS</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('Index')}}"><i
+                                class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('Reception')}}"><i
+                                class="fas fa-hotel"></i><span>Reception</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('Stock')}}"><i
+                                class="fas fa-table"></i><span>Stock</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('Profile')}}"><i
+                                class="fas fa-user"></i><span>Profile</span></a>
+                    </li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0"
+                        id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <h1>{{status}}</h1>
+        <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    {% endblock %}
