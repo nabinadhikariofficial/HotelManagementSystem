@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.secret_key = 'key'
 
 host_add = '0.0.0.0'
-port_add = 800
+port_add = 8000
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -52,7 +52,7 @@ def Profile():
 def Registration():
     if 'loggedin' in session:
         status = request.args.get('status')
-        return render_template('registration.html', status=status)
+        return render_template('registration.html', status=status, color=['#1cc88a', 'white'])
     return redirect(url_for('Login'))
 
 
