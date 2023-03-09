@@ -27,9 +27,289 @@
                         id="sidebarToggle" type="button"></button></div>
             </div>
         </nav>
-        <h1>{{status}}</h1>
-        <img class="rounded img-fluid" src="static/img/bed.png" style="background: {{color[0]}};" />
-        <img class="rounded img-fluid" src="static/img/bed.png" style="background: {{color[1]}};" />
-        <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button id="sidebarToggleTop"
+                            class="btn btn-link d-md-none rounded-circle me-3" type="button"><i
+                                class="fas fa-bars"></i></button>
+                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"><input class="bg-light form-control border-0 small" type="text"
+                                    placeholder="Search for ..." /><button class="btn btn-primary py-0" type="button"><i
+                                        class="fas fa-search"></i></button></div>
+                        </form>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link"
+                                    aria-expanded="false" data-bs-toggle="dropdown" href="#"><i
+                                        class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="me-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small"
+                                                type="text" placeholder="Search for ..." />
+                                            <div class="input-group-append"><button class="btn btn-primary py-0"
+                                                    type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
+                                            class="badge bg-danger badge-counter">3+</span><i
+                                            class="fas fa-bell fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a
+                                            class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-primary icon-circle"><i
+                                                        class="fas fa-file-alt text-white"></i>
+                                                </div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 12, 2019</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-success icon-circle"><i
+                                                        class="fas fa-donate text-white"></i>
+                                                </div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 7, 2019</span>
+                                                <p>$290.29 has been deposited into your account!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-warning icon-circle"><i
+                                                        class="fas fa-exclamation-triangle text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 2, 2019</span>
+                                                <p>Spending Alert: We&#39;ve noticed unusually high spending for your
+                                                    account.</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                            Alerts</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
+                                            class="badge bg-danger badge-counter">7</span><i
+                                            class="fas fa-envelope fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a
+                                            class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="avatars/avatar4.jpeg" />
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Hi there! I am wondering if you can
+                                                        help me
+                                                        with a problem I&#39;ve been having.</span></div>
+                                                <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="avatars/avatar2.jpeg" />
+                                                <div class="status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>I have the photos that you ordered last
+                                                        month!</span></div>
+                                                <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="avatars/avatar3.jpeg" />
+                                                <div class="bg-warning status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Last month&#39;s report looks great, I
+                                                        am
+                                                        very happy with the progress so far, keep up the good
+                                                        work!</span>
+                                                </div>
+                                                <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="avatars/avatar5.jpeg" />
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Am I a good boy? The reason I ask is
+                                                        because someone told me that people say this to all dogs, even
+                                                        if
+                                                        they aren&#39;t good...</span></div>
+                                                <p class="small text-gray-500 mb-0">Chicken the Dog · 2w</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                            Alerts</a>
+                                    </div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
+                                            class="d-none d-lg-inline me-2 text-gray-600 small">Valerie Luna</span><img
+                                            class="border rounded-circle img-profile" src="avatars/avatar1.jpeg" /></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
+                                            class="dropdown-item" href="#"><i
+                                                class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i> Profile</a><a
+                                            class="dropdown-item" href="#"><i
+                                                class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i> Settings</a><a
+                                            class="dropdown-item" href="#"><i
+                                                class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i> Activity log</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i
+                                                class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="row mb-2">
+                        <div class="col-md-8 col-xl-6 text-center mx-auto">
+                            <h2></h2>
+                        </div>
+                    </div>
+                    {% if flag_a %}
+                    <div id="guestSelect" class="row align-content-center mb-2 o-hidden">
+                        <div class="col-xl-4 text-center mx-auto py-3"><button id="newGuest"
+                                class="btn btn-primary w-100" type="button">NEW GUEST</button></div>
+                        <div class="col-xl-4 text-center mx-auto py-3"><button id="oldGuest"
+                                class="btn btn-primary w-100" type="button">OLD GUEST</button></div>
+                    </div>
+                    <div id="newGuestRow" class="row d-flex justify-content-center visually-hidden">
+                        <div class="col-md-6 col-xl-6">
+                            <form class="text-center row g-3" method="post">
+                                <div class="mb-3 col-md-6"><input class="form-control" type="text" name="guest_name"
+                                        placeholder="Name" required /></div>
+                                <div class="mb-3 col-md-6"><input class="form-control" type="text" name="friend_name"
+                                        placeholder="Other Name" /></div>
+                                <div class="mb-3 col-md-8"><input class="form-control" type="text" name="address"
+                                        placeholder="Address" required /></div>
+                                <div class="mb-3 col-md-4"><input class="form-control" type="text" name="coming_from"
+                                        placeholder="Coming From" /></div>
+                                <div class="mb-3 col-md-2"><input class="form-control" type="text" name="pax"
+                                        placeholder="PAX:" required /></div>
+                                <div class="mb-3 col-md-4"><input class="form-control" type="text" name="mobile_no"
+                                        placeholder="Mobile Number" required /></div>
+                                <div class="mb-3 col-md-4"><input class="form-control" type="text" name="nationality"
+                                        placeholder="Nationality" /></div>
+                                <div class="mb-3 col-md-2"><input class="form-control" type="text" name="purpose"
+                                        placeholder="Purpose" /></div>
+                                <div class="mb-3 col-md-6"><select class="form-select" name="id_type">
+                                        <optgroup label="ID Type">
+                                            <option value="Citizenship" selected>Citizenship</option>
+                                            <option value="Lisence">Lisence</option>
+                                            <option value="Voter's card">Voter's Card</option>
+                                            <option value="Passport">Passport</option>
+                                            <option value="16">Others</option>
+                                        </optgroup>
+                                    </select></div>
+                                <div class="mb-3 col-md-6"><input class="form-control" type="text" name="id_no"
+                                        placeholder="ID Number:" /></div>
+                                <div class="mb-3 col-md-6"><input class="form-control" type="text" name="rate"
+                                        placeholder="Room Rate" required /></div>
+                                <div class="mb-3 col-md-6"><input class="form-control" type="text" name="advance"
+                                        placeholder="Advance" /></div>
+                                <div class="mb-3 d-grid gap-2 col-6 mx-auto"><button id="newSubmit"
+                                        class="btn btn-primary d-block w-auto" type="submit">SUBMIT</button></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="oldGuestRow" class="row d-flex justify-content-center visually-hidden">
+                        <div class="col-md-6 col-xl-4 col-xxl-8 my-5">
+                            <form class="row">
+                                <div class="col-md-8"><input class="form-control" type="text" name="search"
+                                        placeholder="Search For" required /></div>
+                                <div class="col-md-3"><select class="form-select">
+                                        <optgroup label="Search Parameter">
+                                            <option value="12" selected>Name</option>
+                                            <option value="13">Mobile No</option>
+                                            <option value="14">Address</option>
+                                        </optgroup>
+                                    </select></div>
+                                <div class="col-md-1"><button class="btn btn-primary" type="button"><i
+                                            class="fas fa-search"></i></button></div>
+                            </form>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div id="infoRow" class="row d-flex justify-content-center">
+                        <div class="col-md-6 col-xl-6">
+                            <form class="text-left row g-3">
+                                <div class="mb-3 col-md-6">
+                                    <h6>Name:</h6>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <h6>Name:</h6>
+                                </div>
+                                <div class="mb-3 col-md-8">
+                                    <h6>Address:</h6>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <h6>Coming from:</h6>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <h6>No. of Persons:
+                                    </h6>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <h6>Mobile No:</h6>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <h6>Nationality</h6>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <h6>Id Type:</h6>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <h6>Id No:</h6>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <h6>Room Rate:</h6>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <h6>Advance:</h6>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Hotel Management System 2023</span>
+                    </div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
+    <script>
+        var button_new = document.querySelector("#newGuest");
+        var button_old = document.querySelector("#oldGuest");
+        var row_new = document.querySelector("#newGuestRow");
+        var row_old = document.querySelector("#oldGuestRow");
+        var row_info = document.querySelector("#infoRow");
+
+        button_new.addEventListener("click", function () {
+            row_new.classList.remove('visually-hidden');
+            row_old.classList.add('visually-hidden');
+        });
+        button_old.addEventListener("click", function () {
+            row_new.classList.add('visually-hidden');
+            row_old.classList.remove('visually-hidden');
+        });
+    </script>
+
+
     {% endblock %}
